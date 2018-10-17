@@ -1,0 +1,19 @@
+{
+  "name": "easyphys",
+  "version": "1.0.0",
+  "description": "A multifunctional physical quantities calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ookldev/easyphys.git"
+  },
+  "author": "Vlad \"Semreg\" Chabaniuk & Andrii Romasiun",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ookldev/easyphys/issues"
+  },
+  "homepage": "https://github.com/ookldev/easyphys#readme"
+}
