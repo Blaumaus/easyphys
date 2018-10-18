@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/ookldev/easyphys.git"
   },
-  "author": "Vlad \"Semreg\" Chabaniuk & Andrii Romasiun",
+  "author": "Vlad 'Semreg' Chabaniuk & Andrii Romasiun",
   "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/ookldev/easyphys/issues"
@@ -22,7 +22,10 @@
     "jquery": "^3.3.1",
     "popper.js": "^1.14.4",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "webpack": "^4.21.0"
+    "react-dom": "^16.5.2"
+  },
+  "devDependencies": {
+    "webpack": "^4.21.0",
+    "webpack-dev-server": "^3.1.9"
   }
 }
