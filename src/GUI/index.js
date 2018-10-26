@@ -1,2 +1,5 @@
-import React from 'React'
-import ReactDom from 'react-dom'
+//import hw from './js/main.js'
+
+var a = 'Vasya'
+
+alert(a)
