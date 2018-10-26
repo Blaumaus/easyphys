@@ -1,5 +1,8 @@
-//import hw from './js/main.js'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './components/App.jsx'
 
-var a = 'Vasya'
-
-alert(a)
+ReactDOM.render(
+  <App />,
+  document.getElementById('app')
+)
