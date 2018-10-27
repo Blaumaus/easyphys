@@ -4,7 +4,7 @@ export default class App extends Component {
   render() {
     return (
       <>
-        <h1>My react App</h1>
+        <h1>EasyPhys</h1>
       </>
     )
   }
