@@ -7,11 +7,14 @@ module.exports = (env, options) => {
 
   return {
     devtool: isDevMode ? 'source-map' : false,
+    
     entry: './src/GUI/index.js',
+    
     output: {
       path: path.join(__dirname, '/dist'),
       filename: 'bundle.js'
     },
+    
     module: {
       rules: [
         {
@@ -31,7 +34,7 @@ module.exports = (env, options) => {
             {
               loader: "css-loader",
               options: {
-              sourceMap: isDevMode
+                sourceMap: isDevMode
               }
             },
             {
@@ -40,7 +43,7 @@ module.exports = (env, options) => {
                 plugins: [
                   require("autoprefixer")()
                 ],
-              sourceMap: isDevMode
+                sourceMap: isDevMode
               }
             },
             {
