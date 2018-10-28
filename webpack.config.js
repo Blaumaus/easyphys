@@ -14,9 +14,8 @@ module.exports = (env, options) => {
     },
     module: {
       rules: [
-        // JS and JSX
         {
-          test:  /\.jsx?$/,
+          test:  /\.jsx?$/, // JS and JSX
           exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
@@ -25,9 +24,8 @@ module.exports = (env, options) => {
             }
           }
         },
-        // SCSS
         {
-          test: /\.scss$/,
+          test: /\.scss$/, // SCSS
           use: [
             "style-loader",
             {
@@ -53,6 +51,26 @@ module.exports = (env, options) => {
             }
           ]
         },
+        {
+          test: /\.(ttf|eot|woff|woff2)$/, //Fonts
+          use: {
+            loader: "file-loader",
+            options: {
+              name: "fonts/[name].[ext]",
+            },
+          },
+        },
+        {
+          test: /\.(jpe?g|png|gif|svg|ico)$/, // Images
+          use: [
+            {
+              loader: "file-loader",
+              options: {
+                outputPath: "assets/"
+              }
+            }
+          ]
+        }
       ]
     },
 
