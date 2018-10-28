@@ -1,5 +1,9 @@
+$header-footer1: #4F319D;
+$header-top1: #5631B4;
+$bg: #dad7df;
+
 body {
-  background-color:rgb(201, 210, 235);
+  background-color: $bg;
 }
 
 footer > div {
@@ -13,7 +17,7 @@ footer {
 }
 
 #navbarHeader {
-  background-color: #0a3fa3c2;
+  background-color: $header-top1;
 }
 
 .description {
@@ -22,11 +26,11 @@ footer {
 }
 
 .navbar {
-  background-color: #023085c2;
+  background-color: $header-footer1;
 }
 
 footer {
-  background-color: #023085c2;
+  background-color: $header-footer1;
 }
 
 #header-img {
