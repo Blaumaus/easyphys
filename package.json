@@ -4,7 +4,7 @@
   "description": "A multifunctional physical quantities calculator",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode development --open",
+    "dev": "webpack-dev-server --mode development --hot --open",
     "build": "webpack --mode production"
   },
   "repository": {
