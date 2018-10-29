@@ -1,6 +1,7 @@
 const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = (env, options) => {
   const isDevMode = options.mode === 'development'
@@ -78,6 +79,8 @@ module.exports = (env, options) => {
     },
 
     plugins: [
+      // new config.optimization.minimize.UglifyJsPlugin(),
+
       new HtmlWebpackPlugin({
         template: './src/index.html'
       }),
@@ -87,7 +90,13 @@ module.exports = (env, options) => {
         jQuery: 'jquery',
         jquery: 'jquery',
         Popper: ['popper.js', 'default']
-      })
-    ]
+      }),
+    ],
+
+    optimization: {
+      minimizer: [
+        new UglifyJsPlugin()
+      ]
+    }
   }
 }
