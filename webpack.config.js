@@ -1,7 +1,8 @@
 const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = (env, options) => {
   const isDevMode = options.mode === 'development'
@@ -79,8 +80,6 @@ module.exports = (env, options) => {
     },
 
     plugins: [
-      // new config.optimization.minimize.UglifyJsPlugin(),
-
       new HtmlWebpackPlugin({
         template: './src/index.html'
       }),
@@ -92,11 +91,5 @@ module.exports = (env, options) => {
         Popper: ['popper.js', 'default']
       }),
     ],
-
-    optimization: {
-      minimizer: [
-        new UglifyJsPlugin()
-      ]
-    }
   }
 }

@@ -9,7 +9,7 @@ import 'bootstrap'
 import './scss/index.scss'
 
 // React Components
-import App from './components/App.jsx'
+import App from './App.jsx'
 
 ReactDOM.render(
   <App />,
