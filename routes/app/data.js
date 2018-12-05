@@ -10,8 +10,12 @@ const data = require('../../models/db/db')
 // @access  Public
 router.get('/:topicName', (req, res) => {
   switch (req.params.topicName) {
-    case "kinematics":
+    case 'kinematics':
       res.json(data.kinematics)
+      break
+
+    default:
+      res.sendStatus(404)
       break
   }
 })
