@@ -3,7 +3,7 @@ import '../styles/App.scss'
 import Header from './layout/Header'
 import Menu from './menu/Menu'
 import Form from './menu/Form'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 class App extends Component {
   constructor(props) {

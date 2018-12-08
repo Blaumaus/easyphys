@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import Modal from './Modal'
 
 export default class Form extends Component {
   constructor(props) {
@@ -7,7 +8,7 @@ export default class Form extends Component {
 
     this.state = {
       find: undefined,
-      modal: false,
+      modalOpen: false,
     }
   }
 
@@ -15,50 +16,30 @@ export default class Form extends Component {
     this.setState({ find: e.target.value })
   }
 
-  checkOnChange = (e) => {
-    this.setState({ modal: true })
+  openModal = (e) => {
+    if (e.target.checked) {
+      this.setState({ modalOpen: true} );
+    }
+  }
+
+  closeModal = (e) => {
+    this.setState({ modalOpen: false });
   }
 
   render() {
-    const { modal } = this.state
+    const { modalOpen } = this.state
 
     if (this.props.data !== undefined) {
       return (
       <>
-        {
-          this.state.modal === true
+      {modalOpen 
+          ? <Modal closeModal={this.closeModal} />
+          : ''}
           
-          ?
-
-          <div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div className="modal-dialog" role="document">
-            <div className="modal-content">
-              <div className="modal-header">
-                <h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div className="modal-footer">
-                <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" className="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div>  
-
-        :
-
-        <></>
-        }
-
         <Link to="/" className="btn btn-dark" >На головну</Link>
         <br/><br/>
         <div className="card card-body mb-4 p-4">
-          <h1 className="display-4 text-center">Що необхідно знайти?</h1>
+          <h1 className="display-4 text-center" id="test">Що необхідно знайти?</h1>
           <p className="lead text-center">Оберіть елемент із випадаючого меню</p>
           <form onSubmit={this.onSubmit}>
             <select className="form-control form-control-lg browser-default custom-select mb-4" style={{ "height": "45px" }} onChange={this.selectOnChange}>
@@ -76,7 +57,7 @@ export default class Form extends Component {
                     key={item.id} 
                     type="checkbox" 
                     className="checkbox checkbox--blue"
-                    onChange={this.checkOnChange} 
+                    onChange={this.openModal} 
                   />
                   {item.char}
                 </li> 

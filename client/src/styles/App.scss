@@ -77,3 +77,15 @@ $material-colors: (
     }
   }
 }
+
+.card {
+  z-index: 5
+}
+
+.modal-dialog {
+  z-index: 10;
+
+  .modal-content {
+    z-index: 15;
+  }
+}
