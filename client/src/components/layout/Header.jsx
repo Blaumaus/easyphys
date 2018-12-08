@@ -16,7 +16,7 @@ export default function Header () {
               <ul className="list-unstyled">
                 <li><a href="mailto:in42udev@outlook.com" className="text-white">Напишіть нам</a></li>
                 <li><a href="https://github.com/ookldev/easyphys" className="text-white">Вихідний код на GitHub</a></li>
-                <li><a href="https://github.com/ookldev/easyphys/issues" className="text-white">Знайшли баг?</a></li>
+                <li><a href="https://github.com/ookldev/easyphys/issues" className="text-white">Знайщли баг? | Є іде як покращити додаток?</a></li>
               </ul>
             </div>
           </div>
