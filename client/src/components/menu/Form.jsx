@@ -12,7 +12,6 @@ export default class Form extends Component {
 
   selectOnChange = (e) => {
     this.setState({ find: e.target.value })
-    return <h1>lorem*1225</h1>
   }
 
   render() {
