@@ -5,8 +5,8 @@ const router = express.Router()
 // DataBase
 const data = require('../../models/db/db')
 
-// @route   GET app/topic
-// @desc    Get The Topic Data
+// @route   GET app/topics
+// @desc    Get All The Topics Names 
 // @access  Public
 router.get('/topics', (req, res) => {
   res.json(data.topic_list)
