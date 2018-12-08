@@ -6,7 +6,8 @@ export default class Form extends Component {
     super(props)
 
     this.state = {
-      find: undefined
+      find: undefined,
+      modal: false,
     }
   }
 
@@ -14,10 +15,46 @@ export default class Form extends Component {
     this.setState({ find: e.target.value })
   }
 
+  checkOnChange = (e) => {
+    this.setState({ modal: true })
+  }
+
   render() {
+    const { modal } = this.state
+
     if (this.props.data !== undefined) {
       return (
       <>
+        {
+          this.state.modal === true
+          
+          ?
+
+          <div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div className="modal-dialog" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" className="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>  
+
+        :
+
+        <></>
+        }
+
         <Link to="/" className="btn btn-dark" >На головну</Link>
         <br/><br/>
         <div className="card card-body mb-4 p-4">
@@ -33,8 +70,16 @@ export default class Form extends Component {
             <h1 className="display-4 text-center">Що вам відомо?</h1>
             <p className="lead text-center">Оберіть величини у списку нижче</p>
             <ul className="inline-ul">
-              {this.props.data.map(item =>(
-               <li className="inline-li" key={item.id}><input key={item.id} type="checkbox" className="checkbox checkbox--blue" />{item.char}</li> 
+              {this.props.data.map(item => (
+                <li className="inline-li" key={item.id}>
+                  <input 
+                    key={item.id} 
+                    type="checkbox" 
+                    className="checkbox checkbox--blue"
+                    onChange={this.checkOnChange} 
+                  />
+                  {item.char}
+                </li> 
               ))}
             </ul>
             <button className="btn btn-primary btn-lg btn-block mb-3 waves-effect" type="submit">Підтвердити</button>
