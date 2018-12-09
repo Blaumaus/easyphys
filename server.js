@@ -29,6 +29,7 @@ app.use(express.static(`./client/build`))
 app.use('/api/data', apiDataRoutes)
 
 // Send All Other Requests To React Router
-app.get('*', (req, res) => res.sendStatus(200))
+app.get('*', (req, res) => res.sendFile(`${__dirname}/client/build/index.html`))
 
+// Start Server
 app.listen(port, () => console.log(`App started on port ${port} ...`))
