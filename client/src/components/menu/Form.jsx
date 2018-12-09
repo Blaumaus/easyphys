@@ -24,7 +24,7 @@ export default class Form extends Component {
       alert('Перевірте правильність введених даних')
     } else {
       axios
-        .post('http://localhost:5000/app/data/send', { given: this.state.given, find: this.state.find })
+        .post('http://localhost:5000/api/data/send', { given: this.state.given, find: this.state.find })
         .then(res => console.log(res))
     }
   }

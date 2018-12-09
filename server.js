@@ -3,7 +3,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 
 // Routes
-const appDataRoutes = require('./routes/app/data')
+const apiDataRoutes = require('./routes/api/data')
 
 // Init Port
 const port = process.env.PORT || 5000
@@ -26,7 +26,7 @@ app.use(bodyParser.json())
 app.use(express.static(`./client/build`))
 
 // App Requests
-app.use('/app/data', appDataRoutes)
+app.use('/api/data', apiDataRoutes)
 
 // Send All Other Requests To React Router
 app.get('*', (req, res) => res.sendStatus(200))

@@ -22,7 +22,7 @@ export default class Menu extends Component {
     e.preventDefault()
 
     axios
-      .get(`http://localhost:5000/app/data/${this.state.topicName}`, { headers: { 'Content-Type': 'application/json' }})
+      .get(`http://localhost:5000/api/data/${this.state.topicName}`, { headers: { 'Content-Type': 'application/json' }})
       .then(res => {
         this.setState({ data: res.data,  redirect: true})
         this.props.updateData(this.state.data)
@@ -31,7 +31,7 @@ export default class Menu extends Component {
 
   componentDidMount() {
     axios
-    .get(`http://localhost:5000/app/data/topics`, { headers: { 'Content-Type': 'application/json' }})
+    .get(`http://localhost:5000/api/data/topics`, { headers: { 'Content-Type': 'application/json' }})
     .then(res => this.setState({ topic_list: res.data }))
   }
 

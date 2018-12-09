@@ -5,14 +5,14 @@ const router = express.Router()
 // DataBase
 const data = require('../../models/db/db')
 
-// @route   GET app/topics
+// @route   GET api/topics
 // @desc    Get All The Topics Names 
 // @access  Public
 router.get('/topics', (req, res) => {
   res.json(data.topic_list)
 })
 
-// @route   GET app/data/:topicName
+// @route   GET api/data/:topicName
 // @desc    Get The Topic Data
 // @access  Public
 router.get('/:topicName', (req, res) => {
@@ -27,7 +27,7 @@ router.get('/:topicName', (req, res) => {
   }
 })
 
-// @route   POST app/send
+// @route   POST api/send
 // @desc    Send info to server 
 // @access  Public
 router.post('/send', (req, res) => {
