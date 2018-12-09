@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import '../styles/App.scss'
+import '../styles/animate.css'
 import Header from './layout/Header'
 import Menu from './menu/Menu'
 import Form from './menu/Form'

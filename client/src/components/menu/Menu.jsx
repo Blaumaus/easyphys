@@ -43,7 +43,7 @@ export default class Menu extends Component {
     }
 
     if (this.state.topic_list === undefined) {
-      return <h1>Сталася помилка</h1>
+      return <h1 className="text-center">Сталася помилка при отриманні даних із сервера :(</h1>
     } 
 
     return (

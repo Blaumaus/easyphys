@@ -27,4 +27,12 @@ router.get('/:topicName', (req, res) => {
   }
 })
 
+// @route   POST app/send
+// @desc    Send info to server 
+// @access  Public
+router.post('/send', (req, res) => {
+  console.log(req.body)
+  res.sendStatus(200)
+})
+
 module.exports = router
