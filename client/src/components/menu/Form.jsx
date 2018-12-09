@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import Modal from './Modal'
+import Modal from '../layout/Modal'
 import axios from 'axios'
 
 export default class Form extends Component {
