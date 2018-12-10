@@ -4,6 +4,7 @@ import '../styles/animate.css'
 import Header from './layout/Header'
 import Menu from './menu/Menu'
 import Form from './menu/Form'
+import Results from './layout/Results'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 class App extends Component {
@@ -27,6 +28,7 @@ class App extends Component {
           <div className="container">
             <Switch>
               <Route path="/form" render= { () => <Form data={this.state.data}/> }/>
+              <Route path="/results" render= { () => <Results /> }/>
               <Route path="/" render= { () => <Menu updateData={this.updateData}/> }/>
             </Switch>
           </div>
