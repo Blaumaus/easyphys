@@ -32,6 +32,9 @@ router.get('/:topicName', (req, res) => {
 // @access  Public
 router.post('/send', (req, res) => {
   console.log(req.body)
+
+  //Here must be handler
+
   res.sendStatus(200)
 })
 
