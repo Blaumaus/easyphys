@@ -12,12 +12,17 @@ class App extends Component {
     super(props)
 
     this.state = {
-      data: undefined
+      data: undefined,
+      result: undefined
     }
   }
 
   updateData = (value) => {
     this.setState({ data: value })
+  }
+
+  updateResult = (value) => {
+    this.setState({ result: value })
   }
 
   render() {
@@ -27,8 +32,8 @@ class App extends Component {
           <Header />
           <div className="container">
             <Switch>
-              <Route path="/form" render= { () => <Form data={this.state.data}/> }/>
-              <Route path="/results" render= { () => <Results /> }/>
+              <Route path="/form" render= { () => <Form data={this.state.data} updateResult={this.updateResult}/> }/>
+              <Route path="/results" render= { () => <Results data={this.state.result}/> }/>
               <Route path="/" render= { () => <Menu updateData={this.updateData}/> }/>
             </Switch>
           </div>

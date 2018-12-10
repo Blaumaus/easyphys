@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Redirect }  from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import Modal from '../layout/Modal'
 import axios from 'axios'
@@ -13,7 +14,8 @@ export default class Form extends Component {
       find: undefined,
 
       modalOpen: false,
-      targetValue: undefined
+      targetValue: undefined,
+      redirect: false
     }
   }
 
@@ -25,7 +27,10 @@ export default class Form extends Component {
     } else {
       axios
         .post('http://localhost:5000/api/data/send', { given: this.state.given, find: this.state.find })
-        .then(res => console.log(res))
+        .then(res => {
+          this.props.updateResult(res.data)
+          this.setState({ redirect: true })
+        })
     }
   }
 
@@ -61,7 +66,11 @@ export default class Form extends Component {
   }
 
   render() {
-    const { modalOpen, targetValue } = this.state
+    const { modalOpen, targetValue, redirect } = this.state
+
+    if (redirect) {
+      return <Redirect to='/results'/>;
+    }
 
     if (this.props.data !== undefined) {
       return (
