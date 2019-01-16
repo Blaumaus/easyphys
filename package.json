@@ -1,0 +1,27 @@
+{
+  "name": "easyphys-new",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "server": "node server.js",
+    "client": "npm start --prefix client",
+    "server-dev": "nodemon server",
+    "dev": "concurrently \"npm run server-dev\" \"npm run client\"",
+    "build": "cd client && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "react-router-dom": "^4.3.1"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "ip": "^1.1.5",
+    "nodemon": "^1.18.7"
+  }
+}

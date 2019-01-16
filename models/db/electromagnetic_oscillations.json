@@ -1,0 +1,71 @@
+[
+  {
+    "id": 0,
+    "char": "T",
+    "mathjax_char": "T",
+    "formula": "6.28*Math.sqrt(L*C)",
+    "mathjax_formula": "T = 2\\pi\\sqrt{LC}",
+    "unit": "с",
+    "desc": "Період (формула Томпсона)"
+  },
+
+  {
+    "id": 1,
+    "char": "L",
+    "mathjax_char": "L",
+    "formula": "(T**(2))/(C*39.43)",
+    "mathjax_formula": "L = \\frac{T^2}{4\\pi^2C}",
+    "unit": "Гн",
+    "desc": "Індуктивність (з формули Томпсона)"
+  },
+
+  {
+    "id": 2,
+    "char": "C",
+    "mathjax_char": "C",
+    "formula": "(T**(2))/(L*39.43)",
+    "mathjax_formula": "C = \\frac{T^2}{4\\pi^2L}",
+    "unit": "Ф",
+    "desc": "Ємність конденсатора (з формули Томпсона)"
+  },
+
+  {
+    "id": 3,
+    "char": "v",
+    "mathjax_char": "v",
+    "formula": "1/Math.sqrt(L*C*6.28)",
+    "mathjax_formula": "v = \\frac{1}{2\\pi\\sqrt{LC}}",
+    "unit": "Гц",
+    "desc": "Частота"
+  },
+
+  {
+    "id": 4,
+    "char": "w",
+    "mathjax_char": "ω",
+    "formula": "1/Math.sqrt(L*C)",
+    "mathjax_formula": "ω = \\frac{1}{LC}",
+    "unit": "Гц",
+    "desc": "Циклічна частота"
+  },
+
+  {
+    "id": 5,
+    "char": "XL",
+    "mathjax_char": "X_L",
+    "formula": "6.28*v*L",
+    "mathjax_formula": "X_L = 2\\pivL",
+    "unit": "Ом",
+    "desc": "Індуктивний опір"
+  },
+
+  {
+    "id": 6,
+    "char": "XC",
+    "mathjax_char": "X_C",
+    "formula": "1/(6.28*v*C)",
+    "mathjax_formula": "X_C = \\frac{1}{2\\pivC}",
+    "unit": "Ом",
+    "desc": "Ємнісний опір"
+  }
+]

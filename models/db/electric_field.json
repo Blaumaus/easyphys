@@ -1,0 +1,171 @@
+[
+  {
+    "id": 0,
+    "char": "E_t",
+    "mathjax_char": "E_t",
+    "formula": "(9*(10**9)*q)/(r_t**2)",
+    "mathjax_formula": "E_t = \\frac{kq}{r^2}",
+    "unit": "В",
+    "desc": "Напруженість електричного поля точкового заряду"
+  },
+
+  {
+    "id": 1,
+    "char": "q",
+    "mathjax_char": "q",
+    "formula": "(E_t*(r_t**2))/(9*(10**9))",
+    "mathjax_formula": "q = \\frac{E_tr^2}{k}",
+    "unit": "Кл",
+    "desc": "Заряд"
+  },
+
+  {
+    "id": 2,
+    "char": "r_t",
+    "mathjax_char": "r",
+    "formula": "Math.sqrt(E_t/(q*9*(10**9)))",
+    "mathjax_formula": "r = \\sqrt{\\frac{E_t}{kq}}",
+    "unit": "м",
+    "desc": "Відстань (з формули напруженості елеектричного поля)"
+  },
+
+  {
+    "id": 3,
+    "char": "A",
+    "mathjax_char": "A",
+    "formula": "q*(fi_1-fi_2)",
+    "mathjax_formula": "A = q(φ_1 - φ_2)",
+    "unit": "Дж",
+    "desc": "Робота (за потенціалами та зарядом)"
+  },
+
+  {
+    "id": 4,
+    "char": "fi_1",
+    "mathjax_char": "φ_1",
+    "formula": "A/q+fi_2",
+    "mathjax_formula": "φ_1 = \\frac{A}{q}+φ_2",
+    "unit": "В",
+    "desc": "Початковий потенціал"
+  },
+
+  {
+    "id": 5,
+    "char": "fi_2",
+    "mathjax_char": "φ_2",
+    "formula": "(-1)*(A/q)+fi_1",
+    "mathjax_formula": "φ_2 = -\\frac{A}{q}+φ_1",
+    "unit": "В",
+    "desc": "Кінцевий потенціал"
+  },
+
+  {
+    "id": 6,
+    "char": "C",
+    "mathjax_char": "C",
+    "formula": "(8.85*10**(-12)*eps*S)/d",
+    "mathjax_formula": "C = \\frac{εε_0S}{d}",
+    "unit": "Ф",
+    "desc": "Електрична ємність плоского конденсатора"
+  },
+
+  {
+    "id": 7,
+    "char": "S",
+    "mathjax_char": "S",
+    "formula": "(C*d)/(eps*8.85*10**(-12))",
+    "mathjax_formula": "S = \\frac{Cd}{εε_0}",
+    "unit": "м",
+    "desc": "Площа перекриття пластин плоского конденсатора"
+  },
+
+  {
+    "id": 8,
+    "char": "d",
+    "mathjax_char": "d",
+    "formula": "C/(eps*8.85*10**(-12)*S)",
+    "mathjax_formula": "d = \\frac{C}{εε_0S}",
+    "unit": "м",
+    "desc": "Відстань між пластинами"
+  },
+
+  {
+    "id": 9,
+    "char": "eps",
+    "mathjax_char": "ε",
+    "formula": "(C*d)/(S*8.85*10**(-12))",
+    "mathjax_formula": "ε = \\frac{Cd}{ε_0S}",
+    "unit": "",
+    "desc": "Діелектрична проникність"
+  },
+
+  {
+    "id": 10,
+    "char": "E",
+    "mathjax_char": "E",
+    "formula": "F/q",
+    "mathjax_formula": "E = \\frac{F}{q}",
+    "unit": "",
+    "desc": "Електричне поле"
+  },
+
+  {
+    "id": 11,
+    "char": "F",
+    "mathjax_char": "F",
+    "formula": "E*q",
+    "mathjax_formula": "F = Eq",
+    "unit": "H",
+    "desc": "Сила електричного поля"
+  },
+
+  {
+    "id": 12,
+    "char": "W_1",
+    "mathjax_char": "W_1",
+    "formula": "(q*E*d)/2",
+    "mathjax_formula": "W_1 = \\frac{qEd}{2}",
+    "unit": "Дж",
+    "desc": "Потенціальна енергія плоского зарядженого конденсатора (за зарядом, відстанню та ел. полем)"
+  },
+
+  {
+    "id": 13,
+    "char": "U",
+    "mathjax_char": "U",
+    "formula": "C/q",
+    "mathjax_formula": "U = \\frac{C}{q}",
+    "unit": "В",
+    "desc": "Напруга на конденсаторі"
+  },
+
+  {
+    "id": 14,
+    "char": "W_2",
+    "mathjax_char": "W_2",
+    "formula": "C*(U**2)/2",
+    "mathjax_formula": "W_2 = \\frac{CU^2}{2}",
+    "unit": "Дж",
+    "desc": "Потенціальна енергія плоского зарядженого конденсатора (за ємністтю на напругою)"
+  },
+
+  {
+    "id": 15,
+    "char": "E_c",
+    "mathjax_char": "E_c",
+    "formula": "(9*(10**9)*q)/((r_t+d_c)**2)",
+    "mathjax_formula": "E_t = \\frac{kq}{r^2}",
+    "unit": "В",
+    "desc": "Напруженість електричного поля сфери"
+  },
+
+  {
+    "id": 16,
+    "char": "d_c",
+    "mathjax_char": "d_c",
+    "formula": "",
+    "mathjax_formula": "",
+    "unit": "м",
+    "desc": "Відстань від сфери"
+  }
+]

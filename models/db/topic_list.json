@@ -1,0 +1,25 @@
+[
+  {
+    "id": 0,
+    "value": "kinematics",
+    "name": "Кінематика"
+  },
+
+  {
+    "id": 1,
+    "value": "magnetic_field",
+    "name": "Магнітне поле"
+  },
+
+  {
+    "id": 2,
+    "value": "electromagnetic_oscillations",
+    "name": "Електромагнітні коливання"
+  },
+
+  {
+    "id": 3,
+    "value": "electric_field",
+    "name": "Електричне поле"
+  }
+]

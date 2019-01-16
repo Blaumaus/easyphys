@@ -1,0 +1,171 @@
+[
+  {
+    "id": 0,
+    "char": "Fa",
+    "mathjax_char": "F_a",
+    "formula": "I*B*l*Math.sin(a_fa)",
+    "mathjax_formula": "F_a = IBl\\sin(a)",
+    "unit": "Н",
+    "desc": "Сила Ампера"
+  },
+
+  {
+    "id": 1,
+    "char": "I",
+    "mathjax_char": "I",
+    "formula": "Fa/(B*l*Math.sin(a_fa))",
+    "mathjax_formula": "I_a = \\frac{F_a}{Bl\\sin(a)}",
+    "unit": "A",
+    "desc": "Сила струму (з формули сили Ампера)"
+  },
+
+  {
+    "id": 2,
+    "char": "B",
+    "mathjax_char": "B",
+    "formula": "Fa/(I*l*Math.sin(a_fa))",
+    "mathjax_formula": "B_a = \\frac{F_a}{Il\\sin(a)}",
+    "unit": "Тл",
+    "desc": "Індукція (з формули сили Ампера)"
+  },
+
+  {
+    "id": 3,
+    "char": "l",
+    "mathjax_char": "l",
+    "formula": "Fa/(I*B*Math.sin(a_fa))",
+    "mathjax_formula": "l_a = \\frac{F_a}{IB\\sin(a)}",
+    "unit": "м",
+    "desc": "Довжина провідника (з формули сили Ампера)"
+  },
+
+  {
+    "id": 4,
+    "char": "a_fa",
+    "mathjax_char": "a",
+    "formula": "Math.sin(Fa/(I*B*l))",
+    "mathjax_formula": "a = \\sin(\\frac{F_a}{IBl})",
+    "unit": "Градуси",
+    "desc": "Кут (з формули сили Ампера)"
+  },
+
+  {
+    "id": 5,
+    "char": "B_1",
+    "mathjax_char": "B_1",
+    "formula": "(12.56*10**(-7)*n*I_1)/l_1",
+    "mathjax_formula": "B = \\frac{4\\pi10^(-7)nI}{l}",
+    "unit": "Тл",
+    "desc": "Індукція магнітного поля котушки"
+  },
+
+  {
+    "id": 6,
+    "char": "n",
+    "mathjax_char": "n",
+    "formula": "(B_1*l_1)/(12.56*10**(-7)*I_1)",
+    "mathjax_formula": "n = \\frac{Bl}{4\\pi10^(-7)I}",
+    "unit": "",
+    "desc": "Кількість витків (з формули індукції магнітного поля котушки)"
+  },
+
+  {
+    "id": 7,
+    "char": "l_1",
+    "mathjax_char": "l_k",
+    "formula": "B_1/(12.56*10**(-7)*n*I_1)",
+    "mathjax_formula": "l = \\frac{B}{4\\pi10^(-7)nI}",
+    "unit": "м",
+    "desc": "Довжина котушки (з формули індукції магнітного поля котушки)"
+  },
+
+  {
+    "id": 8,
+    "char": "I_1",
+    "mathjax_char": "I_k",
+    "formula": "(B_1*l_1)/(12.56*10**(-7)*n)",
+    "mathjax_formula": "I = \\frac{Bl}{4\\pi10^(-7)n}",
+    "unit": "A",
+    "desc": "Сила Ампера (з формули індукції магнітного поля котушки)"
+  },
+
+  {
+    "id": 9,
+    "char": "H",
+    "mathjax_char": "H",
+    "formula": "I_2/l_2",
+    "mathjax_formula": "H = \\frac{I_2}{l_2}",
+    "unit": "В",
+    "desc": "Напруженість магнітного поля"
+  },
+
+  {
+    "id": 10,
+    "char": "I_2",
+    "mathjax_char": "I_2",
+    "formula": "H*l_2",
+    "mathjax_formula": "I_2 = Hl_2",
+    "unit": "А",
+    "desc": "Сила струму (з формули напруженості магнітного поля)"
+  },
+
+  {
+    "id": 11,
+    "char": "l_2",
+    "mathjax_char": "l_2",
+    "formula": "H/I_2",
+    "mathjax_formula": "l_2 = \\frac{H}{l_2}",
+    "unit": "м",
+    "desc": "Довжина магнітної лінії"
+  },
+
+  {
+    "id": 12,
+    "char": "H_1",
+    "mathjax_char": "H_1",
+    "formula": "I_3/(6.28*r)",
+    "mathjax_formula": "H_1 = \\frac{I_3}{2\\pir}",
+    "unit": "В",
+    "desc": "Напруженість магнітного поля нескінченого провідника"
+  },
+
+  {
+    "id": 13,
+    "char": "r",
+    "mathjax_char": "r",
+    "formula": "(H_1*6.28)/I_3",
+    "mathjax_formula": "r = \\frac{2\\piH_1}{I_3}",
+    "unit": "м",
+    "desc": "Відстань напруженості магнітного поля нескінченого провідника"
+  },
+
+  {
+    "id": 14,
+    "char": "I_3",
+    "mathjax_char": "I_3",
+    "formula": "H_1*6.28*r",
+    "mathjax_formula": "I_3 = H_12\\pir",
+    "unit": "А",
+    "desc": "Сила струму з формули напруженості магнітного поля нескінченого провідника"
+  },
+
+  {
+    "id": 15,
+    "char": "W",
+    "mathjax_char": "W",
+    "formula": "L*(I**2)/2",
+    "mathjax_formula": "W = \\frac{LI^2}{2}",
+    "unit": "В",
+    "desc": "Енергія магнітного поля"
+  },
+
+  {
+    "id": 16,
+    "char": "L",
+    "mathjax_char": "L",
+    "formula": "(2*W)/(I**2)",
+    "mathjax_formula": "L = \\frac{2W}{I^2}",
+    "unit": "Тл",
+    "desc": "Індуктивність"
+  }
+]
