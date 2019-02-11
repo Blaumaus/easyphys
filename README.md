@@ -6,6 +6,9 @@ Multifunctional physical quantities calculator written with the support of Javas
 <br/>
 [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/ookldev/easyphys)
 
+## Web Client
+[!Click to try online version](https://easyphys.nbt-team.me/)
+
 ## Installing
 Before you start use out calculator, make sure you have git, node.js and npm installed.
 
