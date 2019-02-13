@@ -16,22 +16,31 @@ class App extends Component {
       result: undefined,
       subject: undefined
     }
-  }
-  
-  updateState = (value) => {
-    this.setState(value)
+
+    this.setState = this.setState.bind(this)
   }
 
+
   render() {
+    let { setState, state } = this
+    let { subject, result, data } = state
+
     return (
       <Router>
         <>
           <Header />
           <div className="container">
             <Switch>
-              <Route path="/form" render= { () => <Form subject={this.state.subject} data={this.state.data} updateState={this.updateState}/> }/>
-              <Route path="/results" render= { () => <Results data={this.state.result}/> }/>
-              <Route path="/" render= { () => <Menu updateState={this.updateState}/> }/>
+              <Route path="/form" render= { () => 
+                <Form subject={subject}
+                    data={data} 
+                    updateState={setState}/> }/>
+
+              <Route path="/results" render= { () => 
+                <Results data={result}/> }/>
+
+              <Route path="/" render= { () => 
+                <Menu updateState={updateState}/> }/>
             </Switch>
           </div>
           </>

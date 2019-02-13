@@ -27,7 +27,7 @@ Then you need to bundle app by next command:
 ```
 $ npm run build
 ```
-You did it! To run out app you neet to start a local server: 
+You did it! To run out app you need to start a local server: 
 
 ```
 $ npm run server
