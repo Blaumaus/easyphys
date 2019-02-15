@@ -14,34 +14,25 @@ Multifunctional physical quantities calculator written with the support of Javas
 ## Installing
 Before you start use out calculator, make sure you have git, node.js and npm installed.
 
-First you have to clone out project. You can do this with that command:
+First you have to clone the project and choose its directory. You can do this with these commands:
 ```
-$ git clone https://github.com/ookldev/easyphys.git
-```
-Then you have to enter the project root directory and type next command:
-```
-$ npm i & npm run client-install
+$ git clone https://github.com/ookldev/easyphys
+$ cd easyphys
 ```
 
-Then you need to bundle app by next command:
+If you're running the app for the first time, enter the following:
 ```
-$ npm run build
-```
-You did it! To run out app you need to start a local server: 
-
-```
-$ npm run server
-````
-
-Or you may just simply copy and paste:
-```
-$ npm i; npm run client-install; npm run build; npm run server
+$ npm run first-run
 ```
 
+Next time you can use:
+```
+$ npm run start
+```
 
 ## Built With
 
-* [Express](https://expressjs.com/ru/) - Backend and REST API
+* [Koa](https://koajs.com/) - Backend and REST API
 * [React](https://reactjs.org/) - Library for UI
 * [Mathjax](https://www.mathjax.org/) - Formulas display engine
 
