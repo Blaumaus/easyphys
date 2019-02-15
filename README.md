@@ -25,7 +25,7 @@ If you're running the app for the first time, enter the following:
 $ npm run first-run
 ```
 
-Next time you can use:
+Next time you may use:
 ```
 $ npm run start
 ```
