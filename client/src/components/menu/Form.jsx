@@ -23,7 +23,7 @@ export default class Form extends Component {
       targetValue: undefined,
       target: undefined,
       redirect: false,
-      location: `${process.env.NODE_ENV === 'development' ? 'http://localhost:5000' : ''}`
+      location: `${process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : ''}`
     }
   }
 

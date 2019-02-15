@@ -11,7 +11,7 @@ export default class Menu extends Component {
       data: undefined,
       topic_list: undefined,
       redirect: false,
-      location: `${process.env.NODE_ENV === 'development' ? 'http://localhost:5000' : ''}`
+      location: `${process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : ''}`
     }
   }
 

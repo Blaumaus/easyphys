@@ -1,10 +1,10 @@
 /* @flow */
-import Provider from './Provider';
-import Node from './Node';
+import Provider from './Provider'
+import Node from './Node'
 
 const MathJax = {
-    Provider,
-    Node
-};
+  Provider,
+  Node
+}
 
-export default MathJax;
+export default MathJax

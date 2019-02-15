@@ -1,27 +1,37 @@
 {
-  "name": "easyphys-new",
+  "name": "easyphys",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "src/index.js",
   "scripts": {
-    "client-install": "npm install --prefix client",
-    "server": "node server.js",
-    "client": "npm start --prefix client",
-    "server-dev": "nodemon server",
-    "dev": "concurrently \"npm run server-dev\" \"npm run client\"",
-    "build": "cd client && npm run build"
+    "first-run": "npm i; cd client; npm i; npm run build; cd ..; npm run start",
+    "build": "cd client; npm run build",
+    "dev": "nodemon --exec babel-node src/index.js",
+    "start": "babel-node src/index.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "GPLv3",
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4",
-    "react-router-dom": "^4.3.1"
+    "@babel/runtime": "^7.2.0",
+    "@koa/cors": "^2.2.3",
+    "dotenv": "^6.2.0",
+    "graphql": "^14.0.2",
+    "ip": "^1.1.5",
+    "koa": "^2.6.2",
+    "koa-body-parser": "^1.1.2",
+    "koa-convert": "^1.2.0",
+    "koa-helmet": "^4.0.0",
+    "koa-router": "^7.4.0",
+    "koa-send": "^5.0.0",
+    "koa-static": "^5.0.0",
+    "mongoose": "^5.4.3"
   },
   "devDependencies": {
-    "concurrently": "^4.1.0",
-    "ip": "^1.1.5",
-    "nodemon": "^1.18.7"
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "nodemon": "^1.18.9"
   }
 }
