@@ -14,7 +14,7 @@ Multifunctional physical quantities calculator written with the support of Javas
 ## Installing
 Before you start use out calculator, make sure you have git, node.js and npm installed.
 
-First you have to clone the project and choose its directory. You can do this with these commands:
+First you have to clone the project and choose its directory. You can do it with these commands:
 ```
 $ git clone https://github.com/ookldev/easyphys
 $ cd easyphys
