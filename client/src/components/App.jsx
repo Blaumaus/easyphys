@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react'
+import React, { Component } from 'react'
 import '../styles/App.scss'
 import '../styles/animate.css'
 import Header from './layout/Header'
@@ -7,31 +7,37 @@ import Form from './menu/Form'
 import Results from './layout/Results'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-const App = props => {
-  const [ state, updateState ] = useState({
-    data: undefined,
-    result: undefined,
-    subject: undefined
-  })
-  
-  updateState = (value) => {
-    setState(value)
+class App extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      data: undefined,
+      result: undefined,
+      subject: undefined
+    }
   }
 
-  return (
-    <Router>
-      <>
-        <Header />
-        <div className="container">
-          <Switch>
-            <Route path="/form" render= { () => <Form subject={state.subject} data={state.data} updateState={updateState}/> }/>
-            <Route path="/results" render= { () => <Results data={state.result}/> }/>
-            <Route path="/" render= { () => <Menu updateState={updateState}/> }/>
-          </Switch>
-        </div>
-        </>
-    </Router>
-  )
+  updateState = (value) => {
+    this.setState(value)
+  }
+
+  render() {
+    return (
+      <Router>
+        <>
+          <Header />
+          <div className="container">
+            <Switch>
+              <Route path="/form" render= { () => <Form subject={this.state.subject} data={this.state.data} updateState={this.updateState}/> }/>
+              <Route path="/results" render= { () => <Results data={this.state.result}/> }/>
+              <Route path="/" render= { () => <Menu updateState={this.updateState}/> }/>
+            </Switch>
+          </div>
+          </>
+      </Router>
+    )
+  }
 }
 
 export default App
