@@ -6,7 +6,7 @@ import helmet from 'koa-helmet'
 import convert from 'koa-convert'
 import serve from 'koa-static'
 import send from 'koa-send'
-import { routes, allowedMethods } from './routes/api/router';
+import { routes, allowedMethods } from './routes/api/router'
 
 // Init Koa
 const app = new Koa()

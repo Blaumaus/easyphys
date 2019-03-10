@@ -28,7 +28,7 @@ export default function Results (props) {
       <>
         <Link to='/' className='btn btn-dark' >На головну</Link>
         <br /><br />
-        <h1 className='text-'>Вибачте! Сталася помилка з відображенням сторінки :(</h1>
+        <h1>Вибачте! Сталася помилка з відображенням сторінки :(</h1>
       </>
     )
   }

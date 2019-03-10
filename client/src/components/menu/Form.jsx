@@ -9,7 +9,7 @@ import axios from 'axios'
 import MathJax from '../../react-mathjax'
 
 export default function Form (props) {
-  const location = `${process.env.NODE_ENV === 'development' ? 'http://localhost:3001' : ''}`
+  const location = `${process.env.NODE_ENV === 'development' ? 'http://localhost:3002' : ''}`
 
   // Data for sending to server
   const [given, setGiven] = useState([])
@@ -34,7 +34,7 @@ export default function Form (props) {
           find: toFind 
         })
         .then(res => {
-          props.updateState({ result: res.data })
+          props.updateResult(res.data)
           setRedirect(true)
         })
     }
@@ -87,7 +87,7 @@ export default function Form (props) {
     return <Redirect to='/results' />
   }
 
-  if (props.data !== undefined) {
+  if (props.data !== null) {
     return (
       <MathJax.Provider>
         {isModalOpen
