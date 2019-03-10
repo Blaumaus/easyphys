@@ -78,7 +78,6 @@ $material-colors: (
   
   /**
    * Iterate over map and autogenerate helper classes.
-  * See "https://codepen.io/fxm90/pen/zGjjrJ" for an example
   */
   @each $name, $value in $material-colors {
     &--#{$name}:checked:before {
