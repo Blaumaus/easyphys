@@ -7,6 +7,7 @@ import { Redirect, Link } from 'react-router-dom'
 import Modal from '../layout/Modal'
 import axios from 'axios'
 import MathJax from '../../react-mathjax'
+import Spinner from '../layout/Spinner'
 
 export default function Form (props) {
   const location = `${process.env.NODE_ENV === 'development' ? 'http://localhost:3002' : ''}`
@@ -156,7 +157,7 @@ export default function Form (props) {
     <>
       <Link to='/' className='btn btn-dark' >На головну</Link>
       <br /><br />
-      <h1 className='text-'>Вибачте! Сталася помилка з відображенням сторінки :(</h1>
+      <Spinner />
     </>
   )
 }

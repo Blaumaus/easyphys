@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
+import Spinner from '../layout/Spinner'
 import axios from 'axios'
 
 export default function Menu (props) {
@@ -37,7 +38,13 @@ export default function Menu (props) {
   }
 
   if (topicList === null) {
-    return <h1 className='text-center'>Сталася помилка при отриманні даних із сервера :(</h1>
+    return (
+      <>
+        <Link to='/' className='btn btn-dark' >На головну</Link>
+        <br /><br />
+        <Spinner />
+      </>
+    )
   }
 
   return (
