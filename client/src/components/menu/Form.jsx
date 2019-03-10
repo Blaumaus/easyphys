@@ -127,19 +127,22 @@ export default function Form (props) {
 
                 {props.data.map(item => (
                   <li 
-                    className='inline-li mt-2' 
+                    className='inline-li mt-2 pointer' 
                     key={item.id} 
                     data-title={item.desc} 
                     title={item.desc}
-                  >
-                    <input
-                      key={item.id}
-                      type='checkbox'
-                      value={item.id}
-                      className='checkbox checkbox--blue'
-                      onChange={openModal}
-                    />
-                    <h6>{<MathJax.Node formula={item.mathjax_char} />} ({item.desc})</h6>
+                  >       
+                    <label>
+                      <input
+                        name={item.id}
+                        key={item.id}
+                        type='checkbox'
+                        value={item.id}
+                        className='checkbox checkbox--blue'
+                        onChange={openModal}
+                      />
+                      <h6 className='pointer'>{<MathJax.Node formula={item.mathjax_char} />} ({item.desc})</h6>
+                    </label>
                   </li>
                 ))}
 

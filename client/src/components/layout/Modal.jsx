@@ -15,7 +15,7 @@ const Modal = props => (
         </div>
         <div className='modal-body'>
           <form id='modal-form' onSubmit={props.onModalSubmit}>
-            <input className='form-control' type='text' name='itemValue' placeholder={'Значення'} />
+            <input className='form-control' type='text' name='itemValue' placeholder={'Значення'} autoFocus/>
           </form>
         </div>
         <div className='modal-footer'>
