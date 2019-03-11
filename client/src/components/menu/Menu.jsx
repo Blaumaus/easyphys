@@ -1,20 +1,30 @@
 import React, { useState, useEffect } from 'react'
 import { Redirect, Link } from 'react-router-dom'
+import { useSpring, animated } from 'react-spring'
 import Spinner from '../layout/Spinner'
 import axios from 'axios'
 
-export default function Menu (props) {
+function Menu (props) {
   const location = `${process.env.NODE_ENV === 'development' ? 'http://localhost:3002' : ''}`
 
   const [topicList, setTopicList] = useState(null)
   const [topicName, setTopicName] = useState(null)
   const [redirect, setRedirect] = useState(false)
 
-  const onChange = (e) => {
+  const springProps = useSpring({ 
+    opacity: 1,
+    marginTop: 0,
+    from: { 
+      opacity: 0,
+      marginTop: -50
+    } 
+  })
+
+  const onChange = e => {
     setTopicName(e.target.value)
   }
 
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     e.preventDefault()
 
     axios
@@ -46,9 +56,9 @@ export default function Menu (props) {
       </>
     )
   }
-
+  
   return (
-    <>
+    <animated.div style={springProps}>
       <div className='card card-body mb-4 p-4'>
         <h1 className='display-4 text-center'>Оберіть тему</h1>
         <p className='lead text-center'>Виберіть назву теми з випадаючого меню</p>
@@ -64,6 +74,8 @@ export default function Menu (props) {
           <button className='btn btn-primary btn-lg btn-block mb-5 waves-effect' type='submit'>Далі</button>
         </form>
       </div>
-    </>
+    </animated.div>
   )
 }
+
+export default Menu

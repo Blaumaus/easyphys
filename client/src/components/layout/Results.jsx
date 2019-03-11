@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Fail, Success } from './Status'
 
-export default function Results (props) {
+function Results (props) {
   if (props.data) {
     return (
       <>
@@ -33,3 +33,5 @@ export default function Results (props) {
     )
   }
 }
+
+export default Results

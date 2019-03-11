@@ -28,13 +28,6 @@ $material-colors: (
   .inline-li:hover {
     cursor: pointer;
   }
-
-  // .inline-li::after { 
-  // content: attr(data-title); 
-  // }
-  // .inline-li:hover::after { 
-  // content: attr(data-title); 
-  // }
 }
 
 /**
@@ -76,10 +69,6 @@ $material-colors: (
     border-right-style: none;
   }
   
-  /**
-   * Iterate over map and autogenerate helper classes.
-  * See "https://codepen.io/fxm90/pen/zGjjrJ" for an example
-  */
   @each $name, $value in $material-colors {
     &--#{$name}:checked:before {
       border-color: $value;
@@ -89,7 +78,7 @@ $material-colors: (
 
 .modal-dialoge {
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   left: 0;
   top: 0;
   width: 100%;
@@ -101,4 +90,12 @@ $material-colors: (
     z-index: 15;
     top: 30%;
   }
+}
+
+.card {
+  z-index: 5
+}
+
+.z-index_top {
+  z-index: 100
 }
