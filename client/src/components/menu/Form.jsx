@@ -125,7 +125,6 @@ function Form (props) {
                   onModalSubmit={onModalSubmit} 
                 />
               </animated.div>
-
             : ''
         )}
 
