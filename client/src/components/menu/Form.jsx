@@ -28,16 +28,13 @@ function Form (props) {
   const transitions = useTransition(toggle, null, {
     from: { 
       position: 'absolute', 
-      opacity: 0,
-      //top: -50
+      opacity: 0
     },
     enter: { 
-      opacity: 1,
-      //top: 0
+      opacity: 1
     },
     leave: {
-      opacity: 0,
-      //top: -50
+      opacity: 0
     },
   })
 
