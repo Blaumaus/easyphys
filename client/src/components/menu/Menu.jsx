@@ -20,9 +20,7 @@ function Menu (props) {
     } 
   })
 
-  const onChange = e => {
-    setTopicName(e.target.value)
-  }
+  const onChange = e => setTopicName(e.target.value)
 
   const onSubmit = e => {
     e.preventDefault()
