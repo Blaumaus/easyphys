@@ -3,12 +3,13 @@
 */
 
 import React, { useState } from 'react'
+import propTypes from 'prop-types'
 import { Redirect, Link } from 'react-router-dom'
 import Modal from '../layout/Modal'
 import axios from 'axios'
 import MathJax from '../../react-mathjax'
 import Spinner from '../layout/Spinner'
-import { useSpring, animated, useTransition } from 'react-spring'
+import { useSpring, useTransition, animated } from 'react-spring'
 
 function Form (props) {
   const location = `${process.env.NODE_ENV === 'development' ? 'http://localhost:3002' : ''}`
@@ -24,27 +25,27 @@ function Form (props) {
 
   // Toggle modal window
   const [toggle, setToggle] = useState(false)
-  
+
   const transitions = useTransition(toggle, null, {
-    from: { 
-      position: 'absolute', 
+    from: {
+      position: 'absolute',
       opacity: 0
     },
-    enter: { 
+    enter: {
       opacity: 1
     },
     leave: {
       opacity: 0
-    },
+    }
   })
 
-  const springProps = useSpring({ 
+  const springProps = useSpring({
     opacity: 1,
     marginTop: 0,
-    from: { 
+    from: {
       opacity: 0,
       marginTop: -50
-    } 
+    }
   })
 
   const onSubmit = e => {
@@ -54,10 +55,10 @@ function Form (props) {
       alert('Перевірте правильність введених даних')
     } else {
       axios
-        .post(`${location}/api/data/send`, { 
+        .post(`${location}/api/data/send`, {
           subject: props.subject,
-          given: given, 
-          find: toFind 
+          given: given,
+          find: toFind
         })
         .then(res => {
           props.updateResult(res.data)
@@ -96,7 +97,7 @@ function Form (props) {
       e.target.itemValue.value = ''
     } else {
       setGiven(
-        [...given,  
+        [...given,
           {
             'id': targetValue.id,
             'char': targetValue.char,
@@ -116,15 +117,15 @@ function Form (props) {
   if (props.data !== null) {
     return (
       <animated.div style={springProps}>
-        {transitions.map(({ item, key, props }) => 
+        {transitions.map(({ item, key, props }) =>
           item
             ? <animated.div style={props} className='z-index_top'>
-                <Modal
-                  value={targetValue} 
-                  closeModal={closeModal} 
-                  onModalSubmit={onModalSubmit} 
-                />
-              </animated.div>
+              <Modal
+                value={targetValue}
+                closeModal={closeModal}
+                onModalSubmit={onModalSubmit}
+              />
+            </animated.div>
 
             : ''
         )}
@@ -157,12 +158,12 @@ function Form (props) {
               <ul className='inline-ul'>
 
                 {props.data.map(item => (
-                  <li 
-                    className='inline-li mt-2 pointer' 
-                    key={item.id} 
-                    data-title={item.desc} 
+                  <li
+                    className='inline-li mt-2 pointer'
+                    key={item.id}
+                    data-title={item.desc}
                     title={item.desc}
-                  >       
+                  >
                     <label>
                       <input
                         name={item.id}
@@ -198,6 +199,13 @@ function Form (props) {
       <Spinner />
     </>
   )
+}
+
+Form.propTypes = {
+  subject: propTypes.string,
+  data: propTypes.array,
+  updateData: propTypes.func,
+  updateResult: propTypes.func
 }
 
 export default Form

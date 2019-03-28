@@ -5,7 +5,7 @@ import dataRoutes from './data'
 // Init router
 const router = new Router()
 
-//@desc /api/films routes
+// @desc /api/films routes
 router.use('/api/data', dataRoutes())
 
 export function routes () { return router.routes() }

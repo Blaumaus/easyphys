@@ -11,20 +11,20 @@ import { routes, allowedMethods } from './routes/api/router'
 // Init Koa
 const app = new Koa()
 
-// Static files
-app.use(serve(`${__dirname}/../client/build`))
-
-// Middleware
-app.use(helmet())
-app.use(convert(bodyParser()))
-app.use(cors())
-
-// Router
 app
+  // Static files
+  .use(serve(`${__dirname}/../client/build`))
+
+  // Other middleware
+  .use(helmet())
+  .use(convert(bodyParser()))
+  .use(cors())
+
+  // Routes
   .use(routes())
   .use(allowedMethods())
 
-// Send React app
-app.use(async ctx => await send(ctx, 'client/build/index.html'))
+  // Send React app
+  .use(async ctx => send(ctx, 'client/build/index.html'))
 
-export default app  
+export default app

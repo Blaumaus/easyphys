@@ -18,25 +18,25 @@ function App () {
         <Header />
         <div className="container">
           <Switch>
-            <Route 
+            <Route
               path="/form"
               render={ () => (
-                <Form 
-                  subject={subject} 
+                <Form
+                  subject={subject}
                   data={data}
                   updateData={setData}
                   updateResult={setResult}
                 />
               )}
             />
-            <Route 
+            <Route
               path="/results"
               render={ () => <Results data={result}/> }
             />
             <Route
               path="/"
               render={ () => (
-                <Menu 
+                <Menu
                   updateData={setData}
                   updateSubject={setSubject}
                 />

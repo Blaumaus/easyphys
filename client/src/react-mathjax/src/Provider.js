@@ -12,10 +12,10 @@ class MathJaxProvider extends React.Component<*, *> {
   }
 
   state: MathJaxContextValue
-
+                                                                                                                    
   static defaultProps = {
     script:
-      'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML',
+      `${__dirname}/script.js`,
     options: {
       tex2jax: {
         inlineMath: []

@@ -11,13 +11,13 @@ function Menu (props) {
   const [topicName, setTopicName] = useState(null)
   const [redirect, setRedirect] = useState(false)
 
-  const springProps = useSpring({ 
+  const springProps = useSpring({
     opacity: 1,
     marginTop: 0,
-    from: { 
+    from: {
       opacity: 0,
       marginTop: -50
-    } 
+    }
   })
 
   const onChange = e => {
@@ -56,7 +56,7 @@ function Menu (props) {
       </>
     )
   }
-  
+
   return (
     <animated.div style={springProps}>
       <div className='card card-body mb-4 p-4'>
