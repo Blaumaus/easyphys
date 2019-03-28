@@ -68,9 +68,7 @@ function Form (props) {
   }
 
   // Select what to find
-  const selectOnChange = e => {
-    setToFind(e.target.value)
-  }
+  const selectOnChange = e => setToFind(e.target.value)
 
   const openModal = e => {
     setTargetValue(props.data[e.target.value])

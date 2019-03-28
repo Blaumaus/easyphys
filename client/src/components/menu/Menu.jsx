@@ -3,8 +3,9 @@ import { Redirect, Link } from 'react-router-dom'
 import { useSpring, animated } from 'react-spring'
 import Spinner from '../layout/Spinner'
 import axios from 'axios'
+import { func } from 'prop-types'
 
-function Menu (props) {
+function Menu ({ updateData, updateSubject }) {
   const location = `${process.env.NODE_ENV === 'development' ? 'http://localhost:3002' : ''}`
 
   const [topicList, setTopicList] = useState(null)
@@ -20,9 +21,7 @@ function Menu (props) {
     }
   })
 
-  const onChange = e => {
-    setTopicName(e.target.value)
-  }
+  const onChange = e => setTopicName(e.target.value)
 
   const onSubmit = e => {
     e.preventDefault()
@@ -32,8 +31,8 @@ function Menu (props) {
       .then(res => {
         setRedirect(true)
 
-        props.updateData(res.data)
-        props.updateSubject(topicName)
+        updateData(res.data)
+        updateSubject(topicName)
       })
   }
 
@@ -76,6 +75,11 @@ function Menu (props) {
       </div>
     </animated.div>
   )
+}
+
+Menu.propTypes = {
+  updateData: func,
+  updateSubject: func
 }
 
 export default Menu
