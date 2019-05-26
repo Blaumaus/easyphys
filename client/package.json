@@ -10,13 +10,16 @@
     "react-mathjax": "^1.0.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.5",
-    "react-spring": "^8.0.14"
+    "react-spring": "^8.0.14",
+    "snyk": "^1.161.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,5 +39,6 @@
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-standard": "^4.0.0",
     "node-sass": "^4.10.0"
-  }
+  },
+  "snyk": true
 }
