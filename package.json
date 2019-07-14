@@ -7,7 +7,9 @@
     "first-run": "npm i; cd client; npm i; npm run build; cd ..; npm run start",
     "build": "cd client; npm run build",
     "dev": "nodemon --exec babel-node src/index.js",
-    "start": "babel-node src/index.js"
+    "start": "babel-node src/index.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [],
   "author": "",
@@ -25,7 +27,8 @@
     "koa-router": "^7.4.0",
     "koa-send": "^5.0.0",
     "koa-static": "^5.0.0",
-    "mongoose": "^5.4.3"
+    "mongoose": "^5.4.3",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -39,5 +42,6 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "nodemon": "^1.18.9"
-  }
+  },
+  "snyk": true
 }
