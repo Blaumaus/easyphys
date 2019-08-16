@@ -8,9 +8,6 @@ Multifunctional physical quantities calculator written with the support of Javas
 
 # Usage
 
-## Online
-[Click to try PWA version](https://bit.ly/easyphys) (hosted on [@neobit-project](https://github.com/neobit-project) servers)
-
 ## Installing
 Before you start use out calculator, make sure you have git, node.js and npm installed.
 
