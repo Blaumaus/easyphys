@@ -36,7 +36,7 @@ $ npm run start
 ## Authors
 
 * **Semreg** - *Frontend and backend* - [Semreg](https://github.com/Semreg)
-* **Ookldev** - *Backend and other logic* - [Ookldev](https://github.com/ookldev)
+* **Gramatik** - *Backend and other logic* - [Gramatik](https://github.com/Gramatik)
 
 ## License
 
