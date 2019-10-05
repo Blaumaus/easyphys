@@ -28,7 +28,7 @@
     "koa-send": "^5.0.0",
     "koa-static": "^5.0.0",
     "mongoose": "^5.4.3",
-    "snyk": "^1.189.0"
+    "snyk": "^1.231.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
