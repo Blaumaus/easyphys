@@ -13,7 +13,7 @@ Before you start use out calculator, make sure you have git, node.js and npm ins
 
 First you have to clone the project and choose its directory. You can do it with these commands:
 ```
-$ git clone https://github.com/ookldev/easyphys
+$ git clone https://github.com/Blaumaus/easyphys
 $ cd easyphys
 ```
 
@@ -36,7 +36,7 @@ $ npm run start
 ## Authors
 
 * **Semreg** - *Frontend and backend* - [Semreg](https://github.com/Semreg)
-* **Gramatik** - *Backend and other logic* - [Gramatik](https://github.com/Gramatik)
+* **Blaumaus** - *Backend and other logic* - [Blaumaus](https://github.com/Blaumaus)
 
 ## License
 
