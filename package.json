@@ -27,7 +27,7 @@
     "koa-router": "^7.4.0",
     "koa-send": "^5.0.0",
     "koa-static": "^5.0.0",
-    "mongoose": "^5.4.3",
+    "mongoose": "^6.0.4",
     "snyk": "^1.189.0"
   },
   "devDependencies": {
